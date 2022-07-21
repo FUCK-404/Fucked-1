@@ -1329,4 +1329,4 @@ def Subscraption():
 		os.system('am start https://wa.me/+923056312378?text=' + tks)
 		Subscraption()        
 
-Subscraption()      
+Subscraption() 
