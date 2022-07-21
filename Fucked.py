@@ -78,14 +78,14 @@ def clear():
 def back():
 	login()
 
-ahsan="TT-"
+rinku="TT-"
 imt="-M4786=="
 ak="JU-"
 myid=uuid.uuid4().hex[:10].upper()
 try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'r').read()
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrrinku-cov', 'r').read()
 except:
-	kok=open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'w')
+	kok=open('/data/data/com.termux/files/usr/bin/.mrrinku-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
 def login():
@@ -1296,7 +1296,7 @@ class Main:
 
 
 def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'r').read()
+	key1=open('/data/data/com.termux/files/usr/bin/.mrrinku-cov', 'r').read()
 	clear()
 	print(logo)
 	r1=requests.get("https://raw.githubusercontent.com/RINKU-CYBER-404/Fucked/main/Text").text
@@ -1319,15 +1319,14 @@ def Subscraption():
 		print("")
 		print(" Copy And Send Key To Admin")
 		print ("")
-		print (" Your Key : "+ak+ahsan+key1)
+		print (" Your Key : "+ak+rinku+key1)
 		print ("")
 		name = input(" Your Name : ")
 		print ("")
 		input(" Press Enter To Send Key")
 		time.sleep(3.5)
-		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+ahsan+''+key1
+		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+rinku+''+key1
 		os.system('am start https://wa.me/+923056312378?text=' + tks)
 		Subscraption()        
-
 
 Subscraption()      
